@@ -17,3 +17,5 @@ dev.off()
 
 
 plot(newiris[c("Petal.Length","Petal.Width")],col=kc$cluster)
+points(kc$centers[,c("Petal.Length","Petal.Width")],col=1:3,pch=17,cex=2)
+dev.off()
