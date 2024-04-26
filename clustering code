@@ -1,7 +1,7 @@
-# Apply K mean to iris ans store result
+# Apply K mean to iris and store result
+newiris <- iris
 newiris$Species <- NULL
 (kc <- kmeans(newiris,3))
-K-means clustering with 3 clusters of sizes 50,38,62
 
 
 compare the species label with the clustering result-----------------
