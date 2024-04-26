@@ -1,0 +1,19 @@
+# Apply K mean to iris ans store result
+newiris$Species <- NULL
+(kc <- kmeans(newiris,3))
+K-means clustering with 3 clusters of sizes 50,38,62
+
+
+compare the species label with the clustering result-----------------
+#Compare the Species label with the clustering result
+table(iris$Species,kc$cluster)
+
+
+plot the cluster and their center-----------------------
+# Plot the cluster and their centers.
+plot (newiris[c("Sepal.Length","Sepal.Width")],col=kc$cluster)
+points(kc$centers[,c("Sepal.Length","Sepal.Width")],col=1:3,pch=15,cex=2)
+dev.off()
+
+
+plot(newiris[c("Petal.Length","Petal.Width")],col=kc$cluster)
